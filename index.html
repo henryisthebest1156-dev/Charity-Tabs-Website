@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Charity Tabs — turn every new tab into donations for charity. Free Chrome extension." />
+  <title>Charity Tabs — Turn Your Tabs Into Donations</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Site navigation: sticky top bar with in-page anchors -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="nav__brand" href="#">Charity Tabs</a>
+      <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-menu" class="nav__links">
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#transparency">Transparency</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero: primary headline and CTA -->
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="hero__inner card card--hero">
+        <h1 id="hero-title" class="hero__title">Turn Your Tabs Into Donations</h1>
+        <p class="hero__subtitle">Every new tab you open helps raise money for charity</p>
+        <a class="btn btn--primary" href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+      </div>
+    </section>
+
+    <!-- How it works: three numbered steps -->
+    <section id="how-it-works" class="section section--tight" aria-labelledby="how-title">
+      <h2 id="how-title" class="section__title">How It Works</h2>
+      <p class="section__lead">Three simple steps. No cost to you.</p>
+      <ol class="steps">
+        <li class="steps__item card">
+          <span class="steps__num" aria-hidden="true">1</span>
+          <h3 class="steps__heading">Open a new tab</h3>
+          <p class="steps__text">Use Chrome as usual. Each new tab is a chance to give back.</p>
+        </li>
+        <li class="steps__item card">
+          <span class="steps__num" aria-hidden="true">2</span>
+          <h3 class="steps__heading">See a simple dashboard with an ad</h3>
+          <p class="steps__text">Your new tab shows a clean layout and a small, respectful ad.</p>
+        </li>
+        <li class="steps__item card">
+          <span class="steps__num" aria-hidden="true">3</span>
+          <h3 class="steps__heading">Revenue from ads is donated to charity</h3>
+          <p class="steps__text">Ad earnings fund donations to the causes you care about.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Features: grid of benefit cards -->
+    <section id="features" class="section" aria-labelledby="features-title">
+      <h2 id="features-title" class="section__title">Features</h2>
+      <ul class="feature-grid">
+        <li class="feature card">
+          <h3 class="feature__title">Donation tracking</h3>
+          <p class="feature__text">Watch your impact grow as you browse.</p>
+        </li>
+        <li class="feature card">
+          <h3 class="feature__title">Choose your charity</h3>
+          <p class="feature__text">Pick the organization you want to support.</p>
+        </li>
+        <li class="feature card">
+          <h3 class="feature__title">Daily streaks</h3>
+          <p class="feature__text">Build a habit of giving, one tab at a time.</p>
+        </li>
+        <li class="feature card">
+          <h3 class="feature__title">100% free</h3>
+          <p class="feature__text">No fees from us—just your normal browsing.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Transparency: trust copy + total raised placeholder -->
+    <section id="transparency" class="section" aria-labelledby="transparency-title">
+      <h2 id="transparency-title" class="section__title">Transparency</h2>
+      <div class="transparency card">
+        <p class="transparency__text">
+          We track donations in aggregate and plan to share totals publicly so you can see
+          the community’s impact. We’re committed to clear reporting and honest numbers.
+        </p>
+        <div class="transparency__stat" role="status" aria-live="polite">
+          <span class="transparency__stat-label">Total raised</span>
+          <span class="transparency__stat-value" id="total-raised">—</span>
+          <span class="transparency__stat-note">Placeholder — connect your backend or analytics later</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About: short project blurb for footer link target -->
+    <section id="about" class="section section--tight" aria-labelledby="about-title">
+      <h2 id="about-title" class="section__title">About</h2>
+      <div class="about card">
+        <p class="about__text">
+          Charity Tabs is a Chrome extension that replaces your new tab page with a simple dashboard.
+          Optional ads generate revenue that we donate to charity. We’re building something small,
+          honest, and easy to use.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: legal and contact links -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">Charity Tabs</p>
+      <ul class="footer__links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="mailto:hello@charitytabs.example">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <p class="footer__fine">© <span id="year"></span> Charity Tabs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
