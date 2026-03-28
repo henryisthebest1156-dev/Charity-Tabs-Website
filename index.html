@@ -21,6 +21,7 @@
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#transparency">Transparency</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="privacy.html">Privacy</a></li>
       </ul>
     </nav>
@@ -98,6 +99,45 @@
       </div>
     </section>
 
+    <!-- Contact: form submits via FormSubmit → htgamesdev@gmail.com (see script.js) -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section__title">Contact</h2>
+      <p class="section__lead">Questions or feedback? We read every message.</p>
+      <form
+        id="contact-form"
+        class="contact-form card"
+        action="https://formsubmit.co/htgamesdev@gmail.com"
+        method="POST"
+      >
+        <!-- Spam honeypot: must stay empty (FormSubmit rejects if filled) -->
+        <input
+          type="text"
+          name="_honey"
+          class="contact-form__honeypot"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
+        <input type="hidden" name="_subject" value="Charity Tabs — Contact form" />
+        <div class="contact-form__fields">
+          <div class="contact-form__field">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+          </div>
+        </div>
+        <p id="contact-status" class="contact-form__status" role="status" aria-live="polite" hidden></p>
+        <button type="submit" class="btn btn--primary contact-form__submit">Send message</button>
+      </form>
+    </section>
+
     <!-- About: short project blurb for footer link target -->
     <section id="about" class="section section--tight" aria-labelledby="about-title">
       <h2 id="about-title" class="section__title">About</h2>
@@ -117,7 +157,7 @@
       <p class="footer__brand">Charity Tabs</p>
       <ul class="footer__links">
         <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="mailto:hello@charitytabs.example">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="#about">About</a></li>
       </ul>
       <p class="footer__fine">© <span id="year"></span> Charity Tabs. All rights reserved.</p>
